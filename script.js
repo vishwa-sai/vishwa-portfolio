@@ -231,3 +231,4 @@ fetch("https://vishwa-portfolio-backend.onrender.com/profile")
     .catch(error => {
         console.log(error);
     });
+    console.log("NEW SCRIPT LOADED");
