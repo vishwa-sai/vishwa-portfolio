@@ -147,26 +147,6 @@ window.addEventListener("load", () => {
 
 });
 
-// Contact Form
-
-const contactForm =
-    document.querySelector(".contact-form");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", (e) => {
-
-        e.preventDefault();
-
-        alert(
-            "Thank you for reaching out! This demo form is currently not connected to a backend."
-        );
-
-        contactForm.reset();
-
-    });
-
-}
 
 // Statistics Counter Animation
 
@@ -227,3 +207,27 @@ console.log(
     "%cPortfolio Developed by Ch. Vishwa Sai",
     "color:gold; font-size:16px; font-weight:bold;"
 );
+fetch("https://vishwa-portfolio-backend.onrender.com/profile")
+    .then(response => response.json())
+    .then(data => {
+
+        const skillsContainer =
+            document.getElementById("skills-container");
+
+        skillsContainer.innerHTML = "";
+
+        data.skills.forEach(skill => {
+
+            const skillElement =
+                document.createElement("span");
+
+            skillElement.textContent = skill;
+
+            skillsContainer.appendChild(skillElement);
+
+        });
+
+    })
+    .catch(error => {
+        console.log(error);
+    });

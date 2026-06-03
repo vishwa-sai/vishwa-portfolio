@@ -166,18 +166,9 @@
 
         <h2>Technical Skills</h2>
 
-        <div class="skills-container">
-
-            <span>C</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>HTML</span>
-            <span>DBMS</span>
-            <span>Git</span>
-            <span>GitHub</span>
-
-        </div>
-
+        <div class="skills-container" id="skills-container">
+</div>
+            
     </section>
 
     <!-- Projects -->
@@ -281,36 +272,42 @@
 
     <!-- Contact -->
 
-    <section id="contact">
+<section id="contact">
 
-        <h2>Contact Me</h2>
+    <h2>Contact Me</h2>
 
-        <div class="contact-container">
+    <div class="contact-container">
 
-            <form class="contact-form">
+        <form
+            action="https://formspree.io/f/xlgkrpdp"
+            method="POST"
+            class="contact-form">
 
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    required>
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required>
 
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                    required>
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required>
 
-                <textarea
-                    rows="6"
-                    placeholder="Your Message"
-                    required></textarea>
+            <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+                required></textarea>
 
-                <button
-                    type="submit"
-                    class="btn">
-                    Send Message
-                </button>
+            <button
+                type="submit"
+                class="btn">
+                Send Message
+            </button>
 
-            </form>
+        </form>
 
             <div class="contact-info">
 
